@@ -1,0 +1,36 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "client",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--cf",
+                "config/fedml_config.yaml",
+                "--rank",
+                "1"
+            ]
+        },
+        {
+            "name": "server",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--cf",
+                "/kolla/lcdad/fedml/FedML-master/python/examples/cross_silo/mqtt_s3_fedavg_mnist_lr_example/custom_data_and_model/config/fedml_config.yaml",
+                "--rank",
+                "0"
+            ]
+        }
+    ]
+}
